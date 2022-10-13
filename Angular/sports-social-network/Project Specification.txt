@@ -1,0 +1,2 @@
+9. Social network based on sports activities: organization and participation in sports events in Cluj-Napoca
+This project proposes to find solutions that allow the people who are passionate about sports to organize and participate in various sports events. Restrictions related, among other things, to location, required equipment and the participants’ performance level need to be considered.

@@ -1,0 +1,17 @@
+<div *ngIf="posts$ | async as post" class="container">
+  <div class="header">
+    <span class="header-information"><b>Posts</b></span>
+    <button class="header-button" mat-raised-button (click)="goBack()">Back</button>
+  </div>
+  <div class="post-info">
+    <ul *ngFor="let p of post" class="list-info">
+      <li class="information-container">
+        <h3>Title: {{p.title}}</h3>
+        <h4>Author: {{p.author}}</h4>
+      </li>
+      <li class="information-container"><i>{{p.comments}} Comments</i></li>
+      <li class="button-container"><button class="button-post" mat-raised-button>Post</button></li>
+      <hr>
+    </ul>
+  </div>
+</div>

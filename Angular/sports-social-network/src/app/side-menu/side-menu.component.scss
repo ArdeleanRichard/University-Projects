@@ -1,0 +1,24 @@
+.menu-option {
+    margin-bottom: 20px;
+    padding: 0 20px;
+    line-height: 60px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.selected-menu-option {
+    width: 160px;
+    border-bottom: 5px #037DA6 solid;
+    background-color: #33ADD6;
+    line-height: 55px;
+}
+
+.default-menu-option {
+    width: 130px;
+    background-color: #0C86AF;
+}
+
+.default-menu-option:hover {
+    @extend .selected-menu-option; 
+}

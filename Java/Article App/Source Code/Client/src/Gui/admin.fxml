@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="260.0" prefWidth="318.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gui.ControllerAdmin">
+   <children>
+      <Button fx:id="createWriterButton" layoutX="76.0" layoutY="35.0" mnemonicParsing="false" onAction="#openCreateWriter" text="Create Writer Account" />
+      <Button fx:id="deleteWriterButton" layoutX="76.0" layoutY="104.0" mnemonicParsing="false" onAction="#openDeleteWriter" text="Delete Writer Account" />
+      <Button fx:id="updateWriterButton" layoutX="73.0" layoutY="178.0" mnemonicParsing="false" onAction="#openUpdateWriter" text="Update Writer Account" />
+   </children>
+</AnchorPane>

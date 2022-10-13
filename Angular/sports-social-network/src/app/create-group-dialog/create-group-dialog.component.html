@@ -1,0 +1,80 @@
+<form class="create-form" #f="ngForm" (ngSubmit)="f.form.valid && createGroup()" [hidden]="created">
+  <h2 mat-dialog-title>Create Group</h2>
+  <mat-dialog-content>
+    <mat-form-field class="input-item">
+      <input matInput type="text" placeholder="Group Name" [(ngModel)]="name" name="nameInput" [ngClass]="{ 'is-invalid': f.submitted && groupName.invalid }"
+      required minlength="4" #groupName="ngModel">
+    </mat-form-field>
+    <div *ngIf="(groupName.touched || f.submitted) && groupName.invalid" style="color: red;font-size: small;">
+        <div *ngIf="groupName?.errors.required ">
+          You must provide a name for the group.
+        </div>
+        <div *ngIf="groupName?.errors.minlength">
+          Name should be at least 4 characters long
+        </div>
+      </div>
+    <br>
+    <mat-form-field class="input-item">
+      <mat-select required placeholder="Pick a sport" [(ngModel)]="selectedSport" name="sport" #groupSport="ngModel"
+      [ngClass]="{ 'is-invalid': f.submitted && groupSport.invalid }">
+        <mat-option *ngFor="let sport of sports" [value]="sport">
+          {{sport}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <div *ngIf="(groupSport.touched || f.submitted) && groupSport.invalid" style="color: red;font-size: small;">
+        <div *ngIf="groupSport?.errors.required">
+          You must provide the sport for the group.
+        </div>
+      </div>
+    <br>
+    <mat-form-field class="input-item">
+      <mat-select required placeholder="Privacy" #groupType="ngModel" [(ngModel)]="selectedPrivacy" name="privacy"
+      [ngClass]="{ 'is-invalid': f.submitted && groupType.invalid }">
+        <mat-option *ngFor="let t of type" [value]="t">
+          {{t}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <div *ngIf="(groupType.touched || f.submitted) && groupType.invalid" style="color: red;font-size: small;">
+        <div *ngIf="groupType?.errors.required">
+          You must provide the type of the group.
+        </div>
+      </div>
+    <br>
+    <mat-form-field class="input-item">
+      <input matInput required min="5" placeholder="Max Members" type="number" [(ngModel)]="members" name="membersInput"
+      #groupMembers="ngModel" [ngClass]="{ 'is-invalid': f.submitted && groupType.invalid }">
+    </mat-form-field>
+    <div *ngIf="(groupMembers.touched || f.submitted) && groupMembers.invalid" style="color: red;font-size: small;">
+        <div *ngIf="groupMembers?.errors.required">
+          You must provide the maximum number of members.
+        </div>
+        <div *ngIf="groupMembers?.errors.min">
+            Number of members must be at least 5.
+          </div>
+      </div>
+    <br>
+    <mat-form-field class="create-full-width">
+      <textarea matInput placeholder="Description" [(ngModel)]="description" name="descInput"></textarea>
+    </mat-form-field>
+    <br>
+    <input type="file" accept="image/*" (change)="handleFileInput($event.target.files)">
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button mat-raised-button class="create-button" type="submit">Create Group</button>
+    <button mat-raised-button class="cancel-button" (click)="goHome()" color="warn">Cancel</button>
+  </mat-dialog-actions>
+</form>
+
+<div [hidden]="!created">
+<h2 mat-dialog-title>Group Created</h2>
+<mat-dialog-content>
+  <h2>The group has been created</h2>
+</mat-dialog-content>
+<mat-dialog-actions >
+  <div class="mid-button">
+    <button class="mat-raised-button"(click)="goHomeWithCreatedGroup()">Close</button>
+    </div>
+</mat-dialog-actions>
+</div>

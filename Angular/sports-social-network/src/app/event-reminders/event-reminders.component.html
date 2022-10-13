@@ -1,0 +1,72 @@
+<div class="main">
+  <h2 style="text-align: left; margin-left: 40px; font-weight: bold">My Reminders</h2>
+  <div class="yourReminders">
+    <div class="listReminders">
+      <ul>
+        <li class="listRemindersItem" *ngFor="let reminder of yourReminders" style="list-style: none;">
+          <button (click)="selectReminder(reminder)" class="reminderItem" [type]="selectedReminder == reminder ? 'selected' : null">
+            {{reminder.name}}: in {{reminder.count}} {{reminder.unit}} </button>
+        </li>
+      </ul>
+      <button class="buttonReminder" (click)="onRemoveReminder()"> Delete selected reminder </button>
+      <div *ngIf="!selectedReminder" style="color: red;font-size: small;">
+        {{ reminderStatus }}
+      </div>
+    </div>
+  </div>
+
+  <form [formGroup]="reminderCreationForm" class="createReminder">
+    <h2> CREATE REMINDER </h2>
+    <mat-form-field>
+      <mat-select formControlName="chosenEvent" placeholder="event">
+        <mat-option class="eventOption" *ngFor="let o of yourOptions" [value]=o.name>
+          {{o.name}}
+        </mat-option>
+      </mat-select>
+      <span *ngIf="f.chosenEvent.invalid && (f.chosenEvent.dirty || f.chosenEvent.touched)" class="error-message">
+        <span *ngIf="f.chosenEvent?.errors.required">
+          You must provide the event for the reminder.
+        </span>
+      </span>
+    </mat-form-field>
+    <div class="time-form-field">
+      <p>Remind me at:</p>
+
+      <button mat-mini-fab color="warn" class="decButton" (click)="decrementTimeInput()">-</button>
+      <input #remindTime type="time" class="time-input" [value]="remindTimeStr">
+      <button mat-mini-fab color="primary" class="incButton" (click)="incrementTimeInput()">+</button>
+   
+    </div>
+   
+    <div class="repeatForm">
+
+      <mat-form-field class="count">
+        <input matInput type="number" formControlName="number">
+        <span *ngIf="f.number.invalid && (f.number.dirty || f.number.touched)" class="error-message">
+        <span *ngIf="f.number?.errors.required">
+          You must provide the number of repetitions for the reminder.
+        </span>
+      </span>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-select formControlName="repetitions" placeholder="Repeat every">
+          <mat-option class="repeatOption" *ngFor="let r of repetitions" [value]=r>
+            {{r}}
+          </mat-option>
+        </mat-select>
+        <span *ngIf="f.repetitions.invalid && (f.repetitions.dirty || f.repetitions.touched)" class="error-message">
+        <span *ngIf="f.repetitions?.errors.required">
+          You must provide the interval for the reminders.
+        </span>
+      </span>
+      </mat-form-field>
+
+    </div>
+    <br>
+    <button class="buttonReminder" class="tooltip" [disabled]="yourOptions.length === 0"
+            (click)="onAddReminder(remindTime)">
+      <span class="tooltiptext" *ngIf="yourOptions.length === 0"> All of your events have reminders. </span>
+      Add reminder </button>
+  </form>
+</div>

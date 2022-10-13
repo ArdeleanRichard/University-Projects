@@ -1,0 +1,81 @@
+<form [formGroup]="userPreferencesForm">
+<h2>General preference</h2>
+<div class="options-row">
+    <mat-checkbox color="primary" formControlName="homePageSuggestions">Suggest new events on Home page</mat-checkbox>
+    <mat-checkbox color="primary" formControlName="individualEvents">Suggest team events</mat-checkbox>
+    <mat-checkbox color="primary" formControlName="teamEvents">Suggest single events</mat-checkbox>
+</div>
+
+<div class="options-row">
+  <span class="options-row-label">
+    Preferred distance (km):
+  </span>
+  <div class="options-row-content">
+      <mat-slider formControlName="maximumDistance" [min]="0" [max]="100" [step]="1" [thumbLabel]="true" [tickInterval]="1"
+        color="primary" style="width: 400px;">
+    </mat-slider>
+  </div>
+</div>
+
+<div class="options-row">
+  <span class="options-row-label">
+    Preferred time:
+  </span>
+  <div class="options-row-content">
+    <div class="time-form-field">
+      <button mat-mini-fab color="warn" (click)="decrementTimeInput(0)">-</button>
+      <input type="time" class="time-input" [value]="startTimeAsString">
+      <button mat-mini-fab color="primary" (click)="incrementTimeInput(0)">+</button>
+    </div>
+    <span style="margin: 0 40px">to</span>
+    <div class="time-form-field">
+      <button mat-mini-fab color="warn" (click)="decrementTimeInput(1)">-</button>
+      <input type="time" class="time-input" [value]="endTimeAsString">
+      <button mat-mini-fab color="primary" (click)="incrementTimeInput(1)">+</button>
+    </div>
+  </div>
+</div>
+
+<div class="options-row">
+  <span class="options-row-label"></span>
+  <div class="options-row-content">
+      <mat-checkbox color="primary" formControlName="duringWeekends">Mostly weekends</mat-checkbox>
+      <mat-checkbox color="primary" formControlName="duringWeekdays">Mostly working days</mat-checkbox>
+  </div>
+</div>
+
+<div class="options-row">
+  <span class="options-row-label">
+    <div>Explore new things</div>
+    <div style="font-style: italic">(explore new things or stick to the things you usually do)</div>
+  </span>
+  <div class="options-row-content">
+    <span style="width: 80px;">focus on same sports</span>
+      <mat-slider formControlName="exploreIndex" [min]="1" [max]="5" [step]="1" style="width: 500px;" color="primary"></mat-slider>
+    <span style="width: 80px; margin-left: 10px;">explore some new sports</span>
+  </div>
+</div>
+<hr>
+
+<h2>Favorite activities</h2>
+
+<div class="options-row">
+  <mat-form-field>
+    <mat-chip-list #chipList>
+      <mat-chip color="primary" *ngFor="let sport of userPreferredSports" [selectable]="true" [removable]="true"
+        (removed)="removePreferredSport(sport)">
+        {{ sport }}
+        <mat-icon matChipRemove>cancel</mat-icon>
+      </mat-chip>
+    </mat-chip-list>
+    <input [formControl]="preferenceControl" placeholder="add preference..." #PreferenceInput [matAutocomplete]="auto"
+      [matChipInputFor]="chipList" [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="addOnBlur"
+      (matChipInputTokenEnd)="addPreferredSport($event)">
+    <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selectedPreferredSport($event)">
+      <mat-option *ngFor="let sport of FILTERED_SPORTS_LIST | async" [value]="sport">
+        {{ sport }}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</div>
+</form>

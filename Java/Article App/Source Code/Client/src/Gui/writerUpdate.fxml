@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="214.0" prefWidth="448.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gui.ControllerWriterUpdate">
+   <children>
+      <Label layoutX="77.0" layoutY="51.0" text="Username" />
+      <TextField fx:id="usernameTF" layoutX="184.0" layoutY="46.0" prefHeight="31.0" prefWidth="193.0" promptText="Enter username to update" />
+      <Button fx:id="updateWriterButton" layoutX="184.0" layoutY="149.0" mnemonicParsing="false" onAction="#updateWriter" text="Update Writer" />
+      <Label layoutX="79.0" layoutY="101.0" text="Password" />
+      <TextField fx:id="passwordTF" layoutX="184.0" layoutY="96.0" prefHeight="31.0" prefWidth="193.0" promptText="Enter password to update" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,11 @@
+Product: Castraveti murati
+Price: 10
+Quantity: 22
+Total Price: 220
+
+Product: Carnati
+Price: 10
+Quantity: 63
+Total Price: 630
+
+Final price of the order: 850

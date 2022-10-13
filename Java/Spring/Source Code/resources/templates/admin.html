@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <div th:replace="fragments/header :: header-css"/>
+</head>
+<body>
+
+<div th:replace="fragments/header :: header"/>
+
+<div class="container">
+
+    <div class="starter-template">
+        <h1>Admin page (Spring Security protected)</h1>
+		<h2><a th:href="@{/getexercises}">View exercises list</a></h2>
+		<h2><a th:href="@{/getusers}">View user list</a></h2>
+        <h2><a th:href="@{/exercisecreate}">Create exercise</a></h2>
+        <h2><a th:href="@{/exercisedelete}">Delete exercise</a></h2>
+        <h2><a th:href="@{/exerciseupdate}">Update exercise</a></h2>
+        <h2><a th:href="@{/usercreate}">Create user</a></h2>
+        <h2><a th:href="@{/userdelete}">Delete user</a></h2>
+        <h2><a th:href="@{/userupdate}">Update user</a></h2>
+		
+        <form th:action="@{/logout}" method="post">
+            <input type="submit" value="Sign Out"/>
+        </form>
+
+    </div>
+
+</div>
+<!-- /.container -->
+
+<div th:replace="fragments/footer :: footer"/>
+
+</body>
+</html>

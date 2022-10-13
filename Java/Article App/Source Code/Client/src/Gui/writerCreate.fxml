@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="237.0" prefWidth="405.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gui.ControllerWriterCreate">
+   <children>
+      <Label layoutX="58.0" layoutY="52.0" text="Username:" />
+      <Label layoutX="58.0" layoutY="110.0" text="Password:" />
+      <TextField fx:id="usernameTF" layoutX="151.0" layoutY="47.0" promptText="Enter username" />
+      <TextField fx:id="passwordTF" layoutX="151.0" layoutY="105.0" promptText="Enter password" />
+      <Button fx:id="createWriterButton" layoutX="151.0" layoutY="168.0" mnemonicParsing="false" onAction="#createWriter" text="Create Writer" />
+   </children>
+</AnchorPane>

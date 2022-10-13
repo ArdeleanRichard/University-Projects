@@ -1,0 +1,15 @@
+@import '../../assets/scss/variables.scss';
+
+.quizz-dialog .mat-dialog-container {
+    overflow: hidden;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: red;
+}
+
+.mat-raised-button{
+    margin: auto;
+    width: 50%;
+    border: 3px solid $primary;
+    padding: 10px;
+}

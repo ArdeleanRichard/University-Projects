@@ -1,0 +1,44 @@
+#
+# mtl file for Chogall.obj obj file
+#
+
+newmtl creature_chogall_corrupt_chogall_corrupt.m2_Geoset_000
+illum 2
+Kd 1.000000 1.000000 1.000000
+Ka 0.250000 0.250000 0.250000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ns 0.000000
+map_Kd Chogall_chogallbottomcorrupt.png
+newmtl creature_chogall_corrupt_chogall_corrupt.m2_Geoset_001
+illum 2
+Kd 1.000000 1.000000 1.000000
+Ka 0.250000 0.250000 0.250000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ns 0.000000
+map_Kd Chogall_chogallextra.png
+newmtl creature_chogall_corrupt_chogall_corrupt.m2_Geoset_002
+illum 2
+Kd 0.000000 0.000000 0.000000
+Ka 0.250000 0.250000 0.250000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ns 0.000000
+map_Kd Chogall_chogallbottomcorrupt.png
+newmtl creature_chogall_corrupt_chogall_corrupt.m2_Geoset_004
+illum 2
+Kd 1.000000 1.000000 1.000000
+Ka 0.250000 0.250000 0.250000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ns 0.000000
+map_Kd Chogall_chogalltopcorrupt.png
+newmtl creature_chogall_corrupt_chogall_corrupt.m2_Geoset_005
+illum 2
+Kd 0.000000 0.000000 0.000000
+Ka 0.250000 0.250000 0.250000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ns 0.000000
+map_Kd Chogall_chogalltopcorrupt.png

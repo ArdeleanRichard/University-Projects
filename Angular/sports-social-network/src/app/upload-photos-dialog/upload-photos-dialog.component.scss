@@ -1,0 +1,16 @@
+@import "../../assets/scss/variables.scss";
+
+.upload-card {
+  width: 100px;
+  padding: 20px 40px;
+  vertical-align: middle;
+
+  .mat-dialog-content {
+    text-align: center;
+    color: $primary;
+  }
+
+  button {
+    margin-left: 15px;
+  }
+}

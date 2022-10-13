@@ -1,0 +1,89 @@
+@import '../../assets/scss/variables.scss';
+
+.group-container {
+  width: 90%;
+  margin: 5%;
+  margin-top: 60px;
+  padding: 0;
+  background-color: rgba(#E8F8FF, 0.8);
+
+  mat-card-header,
+  mat-card-content,
+  mat-card-actions {
+    margin: 0;
+    padding: 16px;
+  }
+
+  mat-card-content {
+    min-height: 36px;
+  }
+
+  mat-card-actions {
+    padding-top: 0;
+  }
+}
+
+.group-holder {
+  width: 800px;
+  margin: auto;
+  clear: both;
+  margin-top: 50px;
+}
+
+.details-container {
+  width: 800px;
+  margin: auto;
+  clear: both;
+}
+
+.logo {
+  display: inline-block;
+  width: 35%;
+  height: 128px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.group-desc {
+  display: inline-block;
+  width: 45%;
+  padding: 0;
+  align-content: center;
+  margin-left: 5%;
+}
+
+.group-button {
+  background-color: $warn;
+}
+
+.title {
+  text-align: center;
+}
+
+.create-btn {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  width: 130px;
+  height: 30px;
+  background-color: $warn;
+  cursor: pointer;
+
+  &:hover {
+    width: 160px;
+    height: 50px;
+  }
+}
+
+.btn-createGroup {
+  margin: 20px;
+  font-weight: bold;
+  padding: 10px;
+  color: white;
+  font-family: "Comic Sans MS";
+  background: cadetblue;
+  border: 1px solid white;
+  border-radius: 18px;
+  -moz-border-radius: 5px;
+}

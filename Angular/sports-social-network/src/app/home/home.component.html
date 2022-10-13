@@ -1,0 +1,42 @@
+<div class="cards-container" *ngIf="events$ | async as events">
+  <mat-card class="event-card" *ngFor="let event of events">
+    <mat-card-header>
+      <!-- <div mat-card-avatar class="example-header-image"></div> -->
+      <mat-card-title>{{ event.name }}</mat-card-title>
+      <mat-card-subtitle>{{ event.category }}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="{{ event.image_url }}">
+    <mat-card-content>
+      <p>{{ event.description }}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>JOIN</button>
+      <button mat-button>More</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+
+<button mat-raised-button *ngIf="!chatOpen" class="chat-trigger" (click)="openChat()">CHAT</button>
+
+<div *ngIf="chatOpen && lastDiscussion$ | async as lastDiscussion" class="chat-window">
+  <div class="chat-header">
+    <span><b>{{ lastDiscussion.interlocutor }}</b></span>
+    <i class="material-icons chat-close-button" (click)="closeChat()">close</i>
+    <a class="chat-close-button" id="ChatMoreOptions">more</a>
+  </div>
+  <div class="messages-box">
+    <div class="message-row" *ngFor="let message of lastDiscussion.messages" [ngClass]="message.type == 'RECEIVED' ? 'ingoing' : 'outgoing'">
+      {{ message.content }}
+    </div>
+  </div>
+
+  <div class="chat-input">
+    <mat-form-field>
+      <input matInput [(ngModel)]="messageText" placeholder="type here...">
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="sendMessage()">send</button>
+  </div>
+
+</div>
+
+<img src="../../assets/images/cup-icon.png" (click)="joinQuizz()" class="quiz-trigger">

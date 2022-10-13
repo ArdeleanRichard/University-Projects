@@ -1,0 +1,14 @@
+{
+	"writer": [
+         { "username": "r", "password": "r" },
+         { "username": "x", "password": "x" }
+     ],
+	"admin": [
+		 { "username": "a", "password": "a" },
+		 { "username": "b", "password": "b" }
+	],
+	"article": [
+		{ "title": "cevatitlu", "abstract": "cevaabstract", "author": "cevaautor", "body": "cevabody" },
+		{ "title": "cevatitlu", "abstract": "cevaabstract", "author": "cevaautor", "body": "cevabody" }
+	]
+}

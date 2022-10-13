@@ -1,0 +1,11 @@
+
+newmtl BaseMaterial0
+Kd  0.64700004 0.64700004 0.64700004
+Ks  00 00 00
+Ka  00 00 00
+d  1.0
+Ns  00
+illum 2
+map_Kd white.png
+
+

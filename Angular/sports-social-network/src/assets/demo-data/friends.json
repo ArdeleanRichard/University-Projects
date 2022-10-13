@@ -1,0 +1,37 @@
+[
+    {
+        "name" : "Patrick",
+        "rating" : "4.5",
+        "events" : 5
+    },
+    {
+        "name" : "Valentin",
+        "rating" : "5",
+        "events" : 4
+    },
+    {
+        "name" : "Marius",
+        "rating" : "3",
+        "events" : 3
+    },
+    {
+        "name" : "Mihai",
+        "rating" : "5",
+        "events" : 2
+    },
+    {
+        "name" : "Andrei",
+        "rating" : "4",
+        "events" : 10
+    },
+    {
+        "name" : "Dan",
+        "rating" : "3",
+        "events" : 11
+    },
+    {
+        "name" : "Vlad",
+        "rating" : "4.5",
+        "events" : 12
+    }
+]

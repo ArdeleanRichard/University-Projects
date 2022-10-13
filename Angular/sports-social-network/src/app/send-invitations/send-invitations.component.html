@@ -1,0 +1,46 @@
+<div class="friends-window" *ngIf="friends$ | async as friends">
+  <div class="friends-header">
+    <span><b>Friends</b></span>
+    <a class="friends-close-button" id="ChatMoreOptions">Options</a>
+  </div>
+  <div class="friend-box">
+    <ul class="friend-container" *ngFor="let friend of friends;index as i">
+
+      <li class="information-container">
+        <img src="https://www.infrascan.net/demo/assets/img/avatar5.png" width="60px" class="img-circle">
+      </li>
+      <li class="information-container">
+        <p>{{friend.name}}</p>
+        <p>{{friend.rating}} stars</p>
+        <p>{{friend.events}} events</p>
+      </li>
+      <li class="information-container">
+        <mat-checkbox [disabled]="selectedEvent && !invited[i] ? null : true" [(ngModel)]="sel[i]" [value]="true" color="primary"
+          [checked]="sel[i]==true">
+          Invite
+        </mat-checkbox>
+      </li>
+      <li [hidden]='!invited[i]' class="invited">Invited to {{eventName}}</li>
+      <hr>
+    </ul>
+  </div>
+  <div class="button-container">
+    <button mat-raised-button class="list-button" (click)="sendInvite(selectedEvent)">Send</button>
+  </div>
+</div>
+
+<div class="events-window" *ngIf="events$ | async as events">
+  <mat-card *ngFor="let event of events" class="events-information" [ngClass]="selectedEvent && event.name==selectedEvent.name ? 'selected-events-information' : null">
+    <mat-card-content>
+      <p> {{event.name}} </p>
+      <p> {{event.category}}</p>
+      <p> {{event.description}}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button (click)=selectEvent(event) class="tooltip">
+        <span class="tooltiptext" *ngIf="!selectedEvent">Select event to invite player</span>
+        Select</button>
+    </mat-card-actions>
+  </mat-card>
+
+</div>

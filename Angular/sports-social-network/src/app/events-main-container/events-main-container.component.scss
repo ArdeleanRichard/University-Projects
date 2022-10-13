@@ -1,0 +1,25 @@
+@import '../../assets/scss/variables.scss';
+
+.default-container {
+  display: inline-block;
+  height: 100%;
+  vertical-align: top;
+}
+
+.menu-container {
+  width: 20%;
+  padding-top: 60px;
+}
+
+.content-container {
+  width: 80%;
+}
+
+.content-card {
+  min-height: 500px;
+  margin: 60px;
+  padding: 20px;
+  border-radius: 5px;
+  background: rgba(#E8F8FF, 0.8);
+  overflow: hidden;
+}

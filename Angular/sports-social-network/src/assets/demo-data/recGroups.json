@@ -1,0 +1,19 @@
+[{
+    "name": "Ping Pong Observator",
+    "type": "Public",
+    "numberMembers": 10,
+    "maxNumber" : 20,
+    "category": "Ping Pong",
+    "description": "Echipe de amatori, 2 vs 2. Dorim sa arganizam meciuri amicale. Grupul este deschis pentru oricine",
+    "logo": "https://des.gbtcdn.com/uploads/pdm-desc-pic/Distribution/image/2016/04/26/1461666804820000.jpg"
+  },
+  {
+    "name": "Baschet Manastur",
+    "type": "Public",
+    "numberMembers": 8,
+    "maxNumber" : 30,
+    "category": "Baschet",
+    "description": "Echipe intermediate, 4 vs 4.Locatiile le alegem pe parcurs. Grupul este numai pentru oameni seriosi",
+    "logo": "https://cdn.sibiu100.ro/wp-content/uploads/2018/05/baschet-750x438.jpg"
+  }
+]

@@ -1,0 +1,64 @@
+[{
+    "name": "Footbal with the friends",
+    "category": "FOOTBALL",
+    "skill": "BEGINNER",
+    "price": 10,
+    "participants": 10,
+    "description": "Echipe de amatori, 5 vs 5, in limita timpului disponibil",
+    "image_url": "https://cdn.ghanasoccernet.com/2017/07/FOOT.jpg"
+  },
+  {
+    "name": "Central Park running",
+    "category": "RUNNING",
+    "skill": "BEGINNER",
+    "price": 30,
+    "participants": 100,
+    "description": "Alergam in fiecare miercuri in parcul central ca sa ne mentinem in forma",
+    "image_url": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/training-pace-calculator-1534874738.jpg?resize=480:*"
+  },
+  {
+    "name": "Semi-pro volleyball",
+    "category": "VOLLEYBALL",
+    "skill": "INTERMEDIATE",
+    "price": 70,
+    "participants": 20,
+    "description": "Echipa semi-amatoare de volei. E nevoie de inca 4 persoane pentru echipa adversa",
+    "image_url": "https://media.volleyballengland.org/images/imagesource.php?image=4467.jpg&maxwidth=496"
+  },
+  {
+    "name": "Bowling Championship",
+    "category": "BOWLING",
+    "skill": "ADVANCED",
+    "price": 90,
+    "participants": 50,
+    "description": "Campionatul local de bowling amator, Cluj-Napoca, editia XXI",
+    "image_url": "https://www.khilari.com.pk/res/images/events/812x457/event_125_11th-tenpin-bowling-championship-2018_tf.jpg"
+  },
+  {
+    "name": "Sunday cycling",
+    "category": "CYCLING",
+    "skill": "INTERMEDIATE",
+    "price": 0,
+    "participants": 5,
+    "description": "Starting from parking lot of the supermarket and all the way to the park",
+    "image_url": "https://cdnmos-bikeradar.global.ssl.fastly.net/images/news/2014/10/29/cycling_park-3-1475750638809-t3b9m40j54ew-630-80.jpg"
+  },
+  {
+    "name": "Badminton in the backyard",
+    "category": "BADMINTON",
+    "skill": "BEGINNER",
+    "price": 0,
+    "participants": 6,
+    "description": "We play with a couple of friends in the backyard. Any friendly person is welcome.",
+    "image_url": "https://s3-eu-west-1.amazonaws.com/nusdigital/asset/images/6/medium/Badminton.jpg"
+  },
+  {
+    "name": "Regional Table Tennis Championship, 2019",
+    "category": "TABLE TENNIS",
+    "skill": "ADVANCED",
+    "price": 75,
+    "participants": 120,
+    "description": "Starting from parking lot of the supermarket and all the way to the park",
+    "image_url": "https://i0.wp.com/www.u3amoraira-teulada.org/wp-content/uploads/table-tennis-92-p.jpg?fit=570%2C380&ssl=1"
+  }
+]

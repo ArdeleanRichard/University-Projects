@@ -1,0 +1,11 @@
+@import './variables.scss';
+@import '~@angular/material/theming';
+@include mat-core();
+$brand-primary: ( 50: #e1ebeb, 100: #b5cdce, 200: #83abad, 300: #51898c, 400: #2c7074, 500: #07575b, 600: #064f53, 700: #054649, 800: #043c40, 900: #022c2f, A100: #68f1ff, A200: #35ecff, A400: #02e7ff, A700: #00d2e7, contrast: ( 50: #000000, 100: #000000, 200: #000000, 300: #000000, 400: #FFFFFF, 500: #FFFFFF, 600: #FFFFFF, 700: #FFFFFF, 800: #FFFFFF, 900: #FFFFFF, A100: #000000, A200: #000000, A400: #FFFFFF, A700: #FFFFFF));
+$brand-accent: ( 50: #fffde7, 100: #fff9c4, 200: #fff59d, 300: #fff176, 400: #ffee58, 500: #ffeb3b, 600: #ffe935, 700: #ffe52d, 800: #ffe226, 900: #ffdd19, A100: #ffffff, A200: #fffffd, A400: #fff7ca, A700: #fff2b1, contrast: ( 50: #000000, 100: #000000, 200: #000000, 300: #000000, 400: #FFFFFF, 500: #FFFFFF, 600: #FFFFFF, 700: #FFFFFF, 800: #FFFFFF, 900: #FFFFFF, A100: #000000, A200: #000000, A400: #FFFFFF, A700: #FFFFFF));
+$brand-warn: ( 50: #f1e5e2, 100: #ddbdb7, 200: #c69187, 300: #af6557, 400: #9e4433, 500: #8d230f, 600: #851f0d, 700: #7a1a0b, 800: #701508, 900: #5d0c04, A100: #ff948e, A200: #ff635b, A400: #ff3328, A700: #ff1b0e, contrast: ( 50: #000000, 100: #000000, 200: #000000, 300: #000000, 400: #FFFFFF, 500: #FFFFFF, 600: #FFFFFF, 700: #FFFFFF, 800: #FFFFFF, 900: #FFFFFF, A100: #000000, A200: #000000, A400: #FFFFFF, A700: #FFFFFF));
+$primary-palette: mat-palette($brand-primary);
+$accent-palette: mat-palette($brand-accent);
+$warn-palette: mat-palette($brand-warn);
+$main-theme: mat-light-theme($primary-palette, $accent-palette, $warn-palette);
+@include angular-material-theme($main-theme);

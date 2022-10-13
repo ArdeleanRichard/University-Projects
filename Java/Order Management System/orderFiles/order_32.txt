@@ -1,0 +1,16 @@
+Product: Chair
+Price: 30
+Quantity: 3
+Total Price: 90
+
+Product: Mouse
+Price: 25
+Quantity: 6
+Total Price: 150
+
+Product: Keyboard
+Price: 65
+Quantity: 13
+Total Price: 845
+
+Final price of the order: 1085

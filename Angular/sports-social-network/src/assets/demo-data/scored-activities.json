@@ -1,0 +1,32 @@
+[
+    {
+        "type": "QUIZZ_COMPLETION",
+        "reason": "Scored 5/5 in TENNIS QUIZZ",
+        "points": 5,
+        "timestamp": "05.01.2019 14:40"
+    },
+    {
+        "type": "EVENT_PARTICIPATION",
+        "reason": "Participated in Badminton Cup public event",
+        "points": 2,
+        "timestamp": "12.06.2018 13:00"
+    },
+    {
+        "type": "EVENT_PARTICIPATION",
+        "reason": "Participated in Run for shelter dogs public event",
+        "points": 2,
+        "timestamp": "23.07.2018 13:00"
+    },
+    {
+        "type": "NETWORK_ACTIVITY",
+        "reason": "Shared Badminton Cup public event with 5 friends",
+        "points": 3,
+        "timestamp": "10.06.2018 13:00"
+    },
+    {
+        "type": "NETWORK_ACTIVITY",
+        "reason": "Receive reviews over 4.5 for Midnight marathon event",
+        "points": 6,
+        "timestamp": "13.08.2018 13:00"
+    }
+]

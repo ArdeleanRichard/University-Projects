@@ -1,0 +1,47 @@
+[
+    {
+        "interlocutor": "Patrick",
+        "messages": [
+            {
+                "content": "Salut! Ce faci sambata dimineata?",
+                "timestamp": "2018-12-12T09:28:15",
+                "type": "RECEIVED"
+            },
+            {
+                "content": "Salut! Nu am nimic planificat.",
+                "timestamp": "2018-12-12T09:29:31",
+                "type": "SENT"
+            },
+            {
+                "content": "Am inchiriat un teren de fotbal impreuna cu ceilalti de la birou, insa Marius nu mai poate sa vina",
+                "timestamp": "2018-12-12T09:31:04",
+                "type": "RECEIVED"
+            },
+            {
+                "content": "Asa ca mai vem nevoie de inca un jucator. Vrei sa vii?",
+                "timestamp": "2018-12-12T09:32:24",
+                "type": "RECEIVED"
+            },
+            {
+                "content": "Da. Count me in!",
+                "timestamp": "2018-12-12T09:32:47",
+                "type": "SENT"
+            },
+            {
+                "content": "Perfect! Ne vedem acolo.",
+                "timestamp": "2018-12-12T09:33:05",
+                "type": "RECEIVED"
+            },
+            {
+                "content": "Ok! Seara faina.",
+                "timestamp": "2018-12-12T09:33:27",
+                "type": "SENT"
+            },
+            {
+                "content": "Asemenea!",
+                "timestamp": "2018-12-12T09:33:51",
+                "type": "RECEIVED"
+            }
+        ]
+    }
+]

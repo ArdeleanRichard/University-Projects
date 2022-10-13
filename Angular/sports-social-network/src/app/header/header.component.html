@@ -1,0 +1,32 @@
+<div class="background-container">
+  <div class="content-container">
+
+    <div class="menu-area" *ngIf="isUserLoggedIn">
+      <button class="menu-button" mat-raised-button color="primary" *ngFor="let userMenu of USER_MENUS" [type]="selectedMenu == userMenu.name ? 'selected' : null"
+        (click)="selectMenu(userMenu.name)">
+        {{ userMenu.name }}
+      </button>
+    </div>
+
+    <div class="menu-area" *ngIf="!isUserLoggedIn">
+      <h1>Sports Social Network</h1>
+    </div>
+
+    <div class="user-details-area" *ngIf="isUserLoggedIn">
+      <img class="user-icon" src="../../assets/images/user-icon.png">
+      <span class="user-name" [matMenuTriggerFor]="appMenu">John Doe</span>
+      <mat-menu #appMenu="matMenu">
+        <button mat-menu-item (click)="navigateToProfile()">Profile</button>
+        <button mat-menu-item>Settings</button>
+        <button mat-menu-item>Help</button>
+        <button mat-menu-item (click)="logout()">Logout</button>
+      </mat-menu>
+    </div>
+
+    <div class="user-details-area" *ngIf="!isUserLoggedIn">
+      <button mat-stroked-button>Register</button>
+      <button mat-stroked-button (click)="openLoginDialog()">Log In</button>
+    </div>
+
+  </div>
+</div>

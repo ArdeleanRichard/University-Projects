@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <div th:replace="fragments/header :: header-css"/>
+</head>
+<body>
+
+<div th:replace="fragments/header :: header"/>
+
+<div class="container">
+
+	<form class = "form-horizontal" action="#" th:action="@{/exercisedelete}" th:object="${exercise}" method="post">
+		<div class = "form-group">
+			<label class="col-sm-2 control-label">Exercise ID</label>
+			<div class = "col-sm-10">
+				<input type="text" class="form-control" th:field="${exercise.exerciseid}"/>
+			</div>
+		</div>
+		<div class = "form-group">
+			<div class = "col-sm-10">
+				<input type="submit" class="form-control" value="Delete exercise"/>
+			</div>
+		</div>
+	</form>
+</div>
+<!-- /.container -->
+	
+<div th:replace="fragments/footer :: footer"/>
+
+</body>
+</html>

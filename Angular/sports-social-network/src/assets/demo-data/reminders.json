@@ -1,0 +1,23 @@
+[
+    {
+        "name": "Football between friends",
+        "time": "07:00",
+        "count": 12,
+        "unit": "hours",
+        "date": "2019-01-15"
+    },
+    {
+        "name": "Running in the central park",
+        "time": "18:30",
+        "count": 1,
+        "unit": "day",
+        "date": "2019-02-16"
+    },
+    {
+        "name": "Volleyball for pros",
+        "time": "12:15",
+        "count": 1,
+        "unit": "week",
+        "date": "2019-04-04"
+    }
+]

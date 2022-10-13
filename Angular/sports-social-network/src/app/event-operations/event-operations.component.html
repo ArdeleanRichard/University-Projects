@@ -1,0 +1,4 @@
+<div *ngFor="let operation of EVENT_OPERATIONS" class="menu-option" [ngClass]="selectedOperation === operation.name ? 'selected-menu-option' : 'default-menu-option'"
+  (click)="selectOperation(operation.name)">
+  {{ operation.name }}
+</div>

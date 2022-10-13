@@ -1,0 +1,55 @@
+@import '../../assets/scss/variables.scss';
+
+.options-row {
+  display: flex;
+  align-items: center;
+  margin: 25px 0;
+}
+
+.options-row-label {
+  display: inline-block;
+  width: 20%;
+  margin-right: 5%;
+}
+
+.options-row-content {
+  display: flex;
+  align-items: center;
+  width: 75%;
+}
+
+mat-checkbox {
+  margin-right: 30px;
+}
+
+mat-slider {
+  display: inline-block;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+.time-form-field {
+  display: inline-block;
+}
+
+.time-input {
+  margin: 0 10px;
+  border: 1px $primary solid;
+  border-radius: 2px;
+  background-color: white;
+  text-decoration: none;
+}
+
+input[type=time]::-webkit-inner-spin-button,
+input[type=time]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+button.mat-mini-fab {
+  display: inline-block;
+  padding: 0;
+  vertical-align: middle;
+}

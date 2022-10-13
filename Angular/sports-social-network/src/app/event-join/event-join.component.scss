@@ -1,0 +1,89 @@
+@import '../../assets/scss/variables.scss';
+
+.event-preference-search {
+  padding: 0 20px;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.event-list {
+  width: 40%;
+
+  ul {
+    height: 350px;
+    margin: 0;
+    padding-right: 20px;
+    padding-inline-start: 0px;
+    list-style: none;
+    overflow-y: scroll;
+  }
+
+  .listEventsItem {
+    button {
+      width: 100%;
+      margin-bottom: 10px;
+      border: 1px $primary dashed;
+      padding: 12px 20px;
+      background: cadetblue;
+      text-align: start;
+      font-size: 15px;
+
+      &[type=selected] {
+        padding: 20px 15px;
+        border: 5px $primary solid;
+        font: 20px bold;
+      }
+    }
+  }
+
+  .btn-joinEvent {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: 1px solid white;
+    border-radius: 5px;
+    background: cadetblue;
+    font-weight: bold;
+    color: white;
+  }
+}
+
+.event-details {
+  width: 30%;
+  height: 310px;
+  padding: 20px;
+  background: rgba(cadetblue, 0.3);
+  overflow-y: scroll;
+
+
+  label {
+    margin-bottom: 0;
+    font-weight: bold;
+  }
+}
+
+.event-filters {
+  width: 20%;
+
+  h2 {
+    margin-top: 0;
+  }
+
+  mat-slider {
+    width: 100%;
+  }
+
+  button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: 1px solid white;
+    border-radius: 5px;
+    background: cadetblue;
+    font-weight: bold;
+    color: white;
+  }
+}

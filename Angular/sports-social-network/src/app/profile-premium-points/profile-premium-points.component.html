@@ -1,0 +1,40 @@
+<h2>Points log</h2>
+
+<div class="flex-container">
+  <div class="scored-activities-list">
+    <div>
+      <ul>
+        <li class="scored-activities-list-item" *ngFor="let scoredActivity of scoredActivities">
+          <button (click)="selectScoredActivity(scoredActivity)" [ngClass]="scoredActivity.type" [type]="scoredActivity == selectedScoredActivity ? 'selected' : null">
+            <span class="flex-button-text">
+              <span>{{ scoredActivity.reason }}</span>
+              <div>
+                {{ scoredActivity.points }}
+                <img src="../../assets/images/award-point-icon.png">
+              </div>
+            </span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="scored-activity-details" *ngIf="selectedScoredActivity">
+    <label>Reason: </label>
+    <p>{{ selectedScoredActivity.reason }}</p>
+    <label>Type: </label>
+    <p>{{ selectedScoredActivity.type }}</p>
+    <label>Date: </label>
+    <p>{{ selectedScoredActivity.timestamp }}</p>
+    <label>Gained points: </label>
+    <p>{{ selectedScoredActivity.points }}</p>
+  </div>
+</div>
+<hr>
+
+<h2>Achievements</h2>
+
+<mat-chip-list>
+  <mat-chip *ngFor="let achievement of achievements" class="achievement-chip" [ngClass]="achievement.level">{{
+    achievement.title }}</mat-chip>
+</mat-chip-list>

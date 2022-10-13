@@ -1,0 +1,82 @@
+<div class="event-preference-search">
+  <mat-form-field>
+    <mat-chip-list #chipList>
+      <mat-chip color="primary" *ngFor="let sport of userPreferredSports" [selectable]="true" [removable]="true"
+        (removed)="removePreferredSport(sport)">
+        {{ sport }}
+        <mat-icon matChipRemove>cancel</mat-icon>
+      </mat-chip>
+    </mat-chip-list>
+    <input [formControl]="preferenceControl" placeholder="Search by name..." #PreferenceInput [matAutocomplete]="auto"
+      [matChipInputFor]="chipList" [matChipInputSeparatorKeyCodes]="separatorKeysCodes" (matChipInputTokenEnd)="addPreferredSport($event)">
+    <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selectedPreferredSport($event)">
+      <mat-option *ngFor="let sport of FILTERED_SPORTS_LIST | async" [value]="sport">
+        {{ sport }}
+      </mat-option>
+    </mat-autocomplete>
+    <br><label>{{ searchStatus }}</label>
+  </mat-form-field>
+</div>
+
+<div class="flex-container">
+  <div class="event-list">
+    <div>
+      <ul>
+        <li class="listEventsItem" *ngFor="let event of events">
+          <button (click)="selectEvent(event)" [type]="selectedEvent== event ? 'selected' : null">{{event.name}}</button>
+        </li>
+      </ul>
+    </div>
+    <button mat-stroked-button class="btn-joinEvent" (click)="onJoinEvent()">Join Event</button>
+    <div *ngIf="!selectedEvent" style="color: red;font-size: small;">
+      {{ joinEventStatus }}
+    </div>
+  </div>
+
+  <div class="event-details" *ngIf="selectedEvent">
+    <label>Name: </label>
+    <p>{{selectedEvent.name}}</p>
+    <label>Sport: </label>
+    <p>{{selectedEvent.category}}</p>
+    <label>Skill: </label>
+    <p>{{selectedEvent.skill}}</p>
+    <label>Number of participants: </label>
+    <p>{{selectedEvent.participants}}</p>
+    <label>Price: </label>
+    <p>{{selectedEvent.price}}</p>
+    <label>Description: </label>
+    <p>{{selectedEvent.description}}</p>
+  </div>
+
+  <div class="event-filters">
+    <h2>PREFERENCES</h2>
+    <mat-form-field>
+      <mat-select [(ngModel)]="prefSport" placeholder="Sport">
+        <mat-option *ngFor="let sport of SPORTS" [value]="sport">{{ sport }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <mat-select [(ngModel)]="prefSkill" placeholder="Skill level">
+        <mat-option #prefSkill *ngFor="let skill_level of SKILL_LEVELS" [value]="skill_level">{{ skill_level }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <br>
+    Price:
+    <br>
+    <mat-slider [(ngModel)]="prefPrice" color="primary" min="1" max="100" step="1" value="0" thumbLabel [displayWith]="formatLabel"
+      tickInterval="5"></mat-slider>
+    <br>
+    Participants:
+    <br>
+    <mat-slider [(ngModel)]="prefPart" color="primary" min="1" max="100" step="1" value="0" thumbLabel [displayWith]="formatLabel"
+      tickInterval="5"></mat-slider>
+    <br>
+    <button mat-stroked-button (click)="onApplyFilters(prefSport, prefSkill, prefPrice, prefPart)">
+      Apply filters
+    </button>
+    <button mat-stroked-button (click)="onResetFilters()" style="float: right">
+      Reset
+    </button>
+  </div>
+</div>

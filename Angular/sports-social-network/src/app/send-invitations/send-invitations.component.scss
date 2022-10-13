@@ -1,0 +1,122 @@
+@import '../../assets/scss/variables.scss';
+
+.friends-window {
+    top: 120px;
+    left: 0px;
+    width: 400px;
+    border-radius: 5px;
+    background: white;
+    float : left;
+}
+
+.friends-header {
+    padding: 0 10px;
+    border-radius: 0 4px 4px 0;
+    background-color: $disable;
+    line-height: 30px;
+}
+
+.friend-box {
+    height: 400px;
+    padding-top: 7px;
+    overflow-y: scroll;
+    background-color: rgba(#E8F8FF, 0.8);
+}
+
+.friend-container {
+    margin-top:10px;
+    list-style-type: none;
+}
+
+.image-container {
+    float : left;
+}
+
+.text-container {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.information-container{
+    display: inline-block;
+    width: 33%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.img-circle {
+    border-radius: 50%;
+}
+
+.friends-close-button {
+    float: right;
+    background: none;
+    line-height: inherit;
+    cursor: pointer;
+}
+
+.events-window{
+    float:right;
+    width: 400px;
+}
+
+.events-information{
+    margin-top: 50px;
+    margin-bottom: 20px;
+    background-color: rgba($primary, 0.7);
+    
+}
+
+.selected-events-information{
+    border: 5px solid;
+}
+
+.list-button{
+    padding: 0 5px;
+    min-width: 20%;
+    margin-left: 2%;
+    padding: 0px;
+    
+}
+.button-container{
+    background-color:  rgba($disable, 0.7);;
+    display: flex;
+    justify-content: center;
+}
+
+.list-button{
+    background-color: $disable;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    text-align: center;
+}
+
+.invited{
+    width: 33%;
+    margin-left: 5%;
+    font-style: italic;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 250px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: -100%;
+    left: 50%;
+    margin-left: -100px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+

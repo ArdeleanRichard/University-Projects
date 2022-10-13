@@ -1,0 +1,4 @@
+<div *ngFor="let menuOption of menuOptions" class="menu-option" [ngClass]="menuOption == selectedMenuOption ? 'selected-menu-option' : 'default-menu-option'"
+  (click)="selectedMenuItemChanged(menuOption)">
+  {{ menuOption }}
+</div>

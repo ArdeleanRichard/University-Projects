@@ -1,0 +1,40 @@
+<div class="quizz-form" [hidden]="started">
+  <h1 class="quizz-title">Take a quizz to test your sport knowledge!</h1>
+  <mat-form-field class="quizz-select">
+    <mat-select placeholder="Choose a sport" [formControl]="quizzControl" required>
+      <mat-option *ngFor="let sport of SPORTS" [value]="sport">
+        {{ sport }}
+      </mat-option>
+    </mat-select>
+    <mat-error *ngIf="quizzControl.hasError('required')">You must make a selection</mat-error>
+  </mat-form-field>
+  <br>
+  <mat-form-field class="quizz-select">
+    <mat-select placeholder="Choose a difficulty" [formControl]="diffControl" required>
+      <mat-option *ngFor="let difficulty of QUIZZ_DIFFICULTY_LEVELS" [value]="difficulty">
+        {{ difficulty }}
+      </mat-option>
+    </mat-select>
+    <mat-error *ngIf="quizzControl.hasError('required')">You must make a selection</mat-error>
+  </mat-form-field>
+  <br>
+  <button mat-stroked-button [disabled]="!quizzControl.valid || !diffControl.valid" (click)="startQuizz()">
+    Start Quizz
+  </button>
+</div>
+
+<div class="quizz-form" [hidden]="!started" *ngIf="quizzes$ | async as quizzes">
+  <mat-card *ngFor="let quizz of quizzes; index as i" class="questions">
+    <mat-card-title>{{ quizz.nb }}. {{ quizz.question }}</mat-card-title>
+
+    <mat-card-content>
+      <mat-radio-group [(ngModel)]="quizzAnswers[i]">
+        <mat-radio-button class="radio" [value]="'a'">{{ quizz.a }}</mat-radio-button>
+        <mat-radio-button class="radio" [value]="'b'">{{ quizz.b }}</mat-radio-button>
+        <mat-radio-button class="radio" [value]="'c'">{{ quizz.c }}</mat-radio-button>
+        <mat-radio-button class="radio" [value]="'d'">{{ quizz.d }}</mat-radio-button>
+      </mat-radio-group>
+    </mat-card-content>
+  </mat-card>
+  <button mat-stroked-button class="submitButton" (click)="openDialog()">Submit Answers</button>
+</div>

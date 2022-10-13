@@ -1,0 +1,40 @@
+@import '../../assets/scss/variables.scss';
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px;
+
+  div {
+    width: 30%;
+  }
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+mat-form-field[appearance=outline] {
+  margin-top: 20px;
+}
+
+textarea {
+  height: 80px;
+}
+
+.form-button {
+  width: 40%;
+  margin: 60px 5%;
+}
+
+.error-message {
+  display: inline-block;
+  width: 100%;
+  color: $warn;
+  font-size: small;
+}
+
+agm-map {
+  height: 300px;
+}

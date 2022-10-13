@@ -1,0 +1,29 @@
+@import '../../assets/scss/variables.scss';
+.input-item{
+    width:60%;
+    margin-left:5%;
+    margin-top:10px;
+  }
+
+.create-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.create-full-width {
+    width: 100%;
+}
+
+.cancel-button{
+    background-color: $warn;
+}
+
+.create-button{
+    background-color: $primary;
+}
+
+.mid-button{
+    text-align: center;
+    vertical-align: center;
+}

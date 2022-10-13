@@ -1,0 +1,56 @@
+@import '../../assets/scss/variables.scss';
+
+.quizz-form {
+  background-color: rgba(#E8F8FF, 0.8);
+  width: 60%;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.quizz-select {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.quizz-title {
+  text-align: center;
+}
+
+button {
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+#quest {
+  margin-top: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
+  background-color: rgba($primary, 0.7)
+}
+
+.questions {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  background-color: rgba($primary, 0.7)
+}
+
+.radio {
+  margin-right: 20px;
+}
+
+.submitButton {
+  margin-top: 20px;
+  margin-left: 350px;
+  margin-bottom: 20px;
+  background-color: $warn;
+
+}
+
+.quizz-dialog .mat-dialog-container {
+  overflow: hidden;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: red;
+}

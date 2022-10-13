@@ -1,0 +1,76 @@
+<form [formGroup]="eventCreationForm" class="flex-container">
+  <div>
+    <mat-form-field>
+      <input matInput formControlName="name" placeholder="name of the event">
+      <span *ngIf="f.name.invalid && (f.name.dirty || f.name.touched)" class="error-message">
+        <span *ngIf="f.name?.errors.required ">
+          You must provide a name for the event.
+        </span>
+        <span *ngIf="f.name?.errors.minlength">
+          Name is too short. Needs at least 4 characters.
+        </span>
+      </span>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input matInput formControlName="participants" placeholder="required no. of participants">
+      <span *ngIf="f.participants.invalid && (f.participants.dirty || f.participants.touched)" class="error-message">
+        <span *ngIf="f.participants?.errors.required">
+          You must provide the number of participants for the event.
+        </span>
+      </span>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input matInput formControlName="price" placeholder="costs or fees">
+      <span *ngIf="f.price.invalid && (f.price.dirty || f.price.touched)" class="error-message">
+        <span *ngIf="f.price?.errors.required">
+          You must provide the estimated costs.
+        </span>
+      </span>
+    </mat-form-field>
+
+    <button mat-raised-button (click)="onCreate()" color="primary" class="form-button">Submit</button>
+    <button mat-raised-button (click)="onCancel()" color="warn" class="form-button">Cancel</button>
+  </div>
+  <div>
+    <mat-form-field>
+      <mat-select formControlName="category" placeholder="event category">
+        <mat-option *ngFor="let sport of SPORTS" [value]="sport">{{ sport }}</mat-option>
+      </mat-select>
+      <span *ngIf="f.category.invalid && (f.category.dirty || f.category.touched)" class="error-message">
+        <span *ngIf="f.category?.errors.required">
+          You must provide the sport for the event.
+        </span>
+      </span>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-select formControlName="skill" placeholder="participants skill level">
+        <mat-option *ngFor="let skill of SKILL_LEVELS" [value]="skill">{{ skill }}</mat-option>
+      </mat-select>
+      <span *ngIf="f.skill.invalid && (f.skill.dirty || f.skill.touched)" class="error-message">
+        <span *ngIf="f.skill?.errors.required">
+          You must provide the skill level for the event.
+        </span>
+      </span>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-select formControlName="type" placeholder="event type">
+        <mat-option *ngFor="let type of TYPE" [value]="type">{{ type }}</mat-option>
+      </mat-select>
+      <span *ngIf="f.type.invalid && (f.type.dirty || f.type.touched)" class="error-message">
+        <span *ngIf="f.type?.errors.required">
+          You must provide the type of the event.
+        </span>
+      </span>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>additional information</mat-label>
+      <textarea matInput formControlName="description" placeholder="additional information"></textarea>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-calendar [selected]="selectedDate"></mat-calendar>
+  </div>
+</form>
+<agm-map [latitude]="latitude" [longitude]="longitude"></agm-map>

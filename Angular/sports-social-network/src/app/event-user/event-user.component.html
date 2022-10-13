@@ -1,0 +1,72 @@
+<h2 style="margin-top: 0;">Your Events</h2>
+<div class="flex-container">
+  <div class="listEvents">
+    <ul style="list-style: none;padding-inline-start: 0px;margin:0;">
+      <li class="listEventsItem" *ngFor="let event of events">
+        <button (click)="selectEvent(event)" [type]="selectedEvent== event ? 'selected' : null">{{event.name}}</button>
+      </li>
+    </ul>
+  </div>
+  <div class="event-details" [hidden]="!selectedEvent">
+    <h2>Event Details</h2>
+    <label>Name: </label>
+    <p>{{selectedEventName}}</p>
+    <label>Sport: </label>
+    <p>{{selectedEventSport}}</p>
+    <label>Skill: </label>
+    <p>{{selectedEventSkill}}</p>
+    <label>Number of participants: </label>
+    <p>{{selectedEventNrParticipants}}</p>
+    <label>Price: </label>
+    <p>{{selectedEventPrice}}</p>
+    <label>Description: </label>
+    <p>{{selectedEventDescription}}</p>
+  </div>
+  <form [formGroup]="eventChangeForm" class="event-change" [hidden]="!selectedEvent">
+    <h2>Change event</h2>
+    <p>Name: </p>
+    <mat-form-field>
+      <input matInput formControlName="name" placeholder="New name"/>
+      <span *ngIf="f.name.invalid && (f.name.dirty || f.name.touched)" class="error-message">
+        <span *ngIf="f.name?.errors.required ">
+          You must provide a name for the event.
+        </span>
+        <span *ngIf="f.name?.errors.minlength">
+          Name is too short. Needs at least 4 characters.
+        </span>
+      </span>
+    </mat-form-field>
+    <!--<p>Sport: </p>-->
+    <!--<mat-form-field>-->
+      <!--<input matInput value="{{selectedEventSport}}"/>-->
+    <!--</mat-form-field>-->
+    <!--<p>Skill: </p>-->
+    <!--<mat-form-field>-->
+      <!--<input matInput value="{{selectedEventSkill}}"/>-->
+    <!--</mat-form-field>-->
+    <p>Number of participants: </p>
+    <mat-form-field>
+      <input matInput formControlName="participants" placeholder="New number of participants"/>
+      <span *ngIf="f.participants.invalid && (f.participants.dirty || f.participants.touched)" class="error-message">
+        <span *ngIf="f.participants?.errors.required">
+          You must provide the number of participants for the event.
+        </span>
+      </span>
+    </mat-form-field>
+    <p>Price: </p>
+    <mat-form-field>
+      <input matInput formControlName="price" placeholder="New price"/>
+      <span *ngIf="f.price.invalid && (f.price.dirty || f.price.touched)" class="error-message">
+        <span *ngIf="f.price?.errors.required">
+          You must provide the estimated costs.
+        </span>
+      </span>
+    </mat-form-field>
+    <p>Description: </p>
+    <mat-form-field>
+      <input matInput formControlName="description" placeholder="New description"/>
+    </mat-form-field>
+    <br>
+    <button mat-raised-button (click)="onChangeEvent()" color="primary" class="form-button">Submit</button>
+  </form>
+</div>

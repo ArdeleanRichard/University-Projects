@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Biliard cu baietii",
+        "category": "BILIARD",
+        "skill": "Beginner",
+        "price": 10,
+        "participants": 4,
+        "description": "Echipe de amatori, 2 vs 2, 1 ora",
+        "image_url": "https://cdn.ghanasoccernet.com/2017/07/FOOT.jpg"
+    },
+    {
+        "name": "Fotbal profesionist",
+        "category": "FOTBALL",
+        "skill": "ADVANCED",
+        "price": 30,
+        "participants": 22,
+        "description": "Fotbal profesionist pe teren mare",
+        "image_url": "https://cdn.ghanasoccernet.com/2017/07/FOOT.jpg"
+    }
+]

@@ -1,0 +1,171 @@
+@import "../../assets/scss/variables.scss";
+
+.main {
+
+  .yourReminders {
+    width: 40%;
+    float: left;
+    overflow: hidden;
+    overflow-y: auto;
+    text-align: center;
+
+    ul {
+      height: 350px;
+      margin: 0;
+      padding-right: 20px;
+      padding-inline-start: 0px;
+      list-style: none;
+      overflow-y: scroll;
+    }
+
+    .listRemindersItem {
+      button {
+        width: 100%;
+        margin-bottom: 10px;
+        border: 1px $primary dashed;
+        padding: 12px 20px;
+        background: cadetblue;
+        text-align: start;
+        font-size: 15px;
+
+        &[type=selected] {
+          padding: 20px 15px;
+          border: 5px $primary solid;
+          font: 20px bold;
+        }
+      }
+    }
+  }
+
+  .createReminder {
+    float: right;
+    width: 30%;
+    height: 400px;
+    border: 3px solid white;
+    text-align: center;
+    border-radius: 5px;
+    margin-right: 30px;
+
+    h4 {
+      font-family: "FreeMono", sans-serif;
+      color: rgb(2, 29, 51);
+    }
+
+    .eventOption {
+      width: 250px;
+      padding-left: 10px;
+      margin-left: 100px;
+      font-size: smaller;
+    }
+
+    input {
+      margin-top: 5px;
+      width: 180px;
+    }
+
+    .time-form-field {
+      display: inline-block;
+    }
+
+    .time-input {
+      margin: 0 10px;
+      border: 1px $primary solid;
+      border-radius: 2px;
+      background-color: white;
+      text-decoration: none;
+    }
+
+    .decButton {
+      display: inline-block;
+      padding: 0;
+      vertical-align: middle;
+    }
+
+    .incButton {
+      display: inline-block;
+      padding: 0;
+      vertical-align: middle;
+    }
+
+    .repeatForm {
+      margin: 0px;
+      display: inline-block;
+
+      .count {
+        width: 200px;
+        margin-right: 5px;
+      }
+
+      .repeatOption {
+        margin-left: 5px;
+        font-size: smaller;
+      }
+    }
+    p {
+        text-align: left;
+        margin-left: 10px;
+    }
+  }
+
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    opacity: 1;
+  }
+
+  input[type="time"]::-webkit-inner-spin-button,
+  input[type="time"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  .buttonReminder {
+    margin-top: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    border-color: rgb(17, 185, 177);
+    border: 2px solid;
+    color: white;
+    background-color: cadetblue;
+  }
+}
+
+.tooltip {
+  margin-top: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  border-color: rgb(17, 185, 177);
+  border: 2px solid;
+  color: white;
+  background-color: cadetblue;
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 250px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: -120%;
+  left: 50%;
+  margin-left: -120px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.error-message {
+  display: inline-block;
+  width: 100%;
+  color: $warn;
+  font-size: small;
+}

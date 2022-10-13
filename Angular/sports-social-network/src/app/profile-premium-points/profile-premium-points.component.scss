@@ -1,0 +1,95 @@
+@import '../../assets/scss/variables.scss';
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.scored-activities-list {
+  width: 60%;
+
+  ul {
+    height: 300px;
+    margin: 0;
+    padding-right: 20px;
+    padding-inline-start: 0px;
+    list-style: none;
+    overflow-y: scroll;
+  }
+
+  .scored-activities-list-item {
+    button {
+      width: 100%;
+      margin-bottom: 10px;
+      border: 1px $primary dashed;
+      padding: 12px 20px;
+      text-align: start;
+      font-size: 15px;
+
+      &[type=selected] {
+        padding: 20px 15px;
+        border: 5px $primary solid;
+        font-size: 20px;
+        font-style: bold;
+      }
+
+      &.QUIZZ_COMPLETION {
+        background: sandybrown;
+      }
+
+      &.EVENT_PARTICIPATION {
+        background: turquoise;
+      }
+
+      &.NETWORK_ACTIVITY {
+        background: lightskyblue;
+      }
+    }
+
+    .flex-button-text {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      font-size: 20px;
+
+      img {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}
+
+.scored-activity-details {
+  width: 30%;
+  height: 260px;
+  padding: 20px;
+  background: rgba(cadetblue, 0.3);
+  overflow-y: scroll;
+
+  label {
+    margin-bottom: 0;
+    font-weight: bold;
+  }
+}
+
+.achievement-chip {
+  &.BRONZE {
+    background: sandybrown;
+  }
+
+  &.SILVER {
+    background: silver;
+  }
+
+  &.GOLD {
+    background: gold;
+  }
+
+  &.PLATINUM {
+    background: white;
+  }
+}

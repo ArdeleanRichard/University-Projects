@@ -1,0 +1,19 @@
+[{
+    "name": "Fotbal Observator",
+    "type": "Public",
+    "numberMembers": 10,
+    "maxNumber" : 20,
+    "category": "Fotbal",
+    "description": "Echipe de amatori, 5 vs 5",
+    "logo": "https://cdn.ghanasoccernet.com/2017/07/FOOT.jpg"
+  },
+  {
+    "name": "Rugby Marasti",
+    "type": "Public",
+    "numberMembers": 20,
+    "maxNumber" : 35,
+    "category": "Rugby",
+    "description": "Echipe intermediate, 6 vs 6",
+    "logo": "http://allgbp.com/wp-content/uploads/2016/09/rugby2-640x364.jpg"
+  }
+]

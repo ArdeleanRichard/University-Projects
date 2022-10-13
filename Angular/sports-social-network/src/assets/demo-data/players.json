@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Dumea Eric",
+    "reviewNumber": 10,
+    "rating": 4.4,
+    "image_url": "https://cdn.ghanasoccernet.com/2017/07/FOOT.jpg"
+  },
+  {
+    "name": "Coporiie Andreea",
+    "reviewNumber": 100,
+    "rating": 4.9,
+    "image_url": "https://cdn.ghanasoccernet.com/2017/07/FOOT.jpg"
+  },
+  {
+    "name": "Ardelean Richard",
+    "reviewNumber": 5,
+    "rating": 4.0,
+    "image_url": "https://cdn.ghanasoccernet.com/2017/07/FOOT.jpg"
+  },
+  {
+    "name": "Han Ana",
+    "reviewNumber": 12,
+    "rating": 4.3,
+    "image_url": "https://cdn.ghanasoccernet.com/2017/07/FOOT.jpg"
+  },
+  {
+    "name": "Detesan Claudiu",
+    "reviewNumber": 10,
+    "rating": 3.7,
+    "image_url": "https://cdn.ghanasoccernet.com/2017/07/FOOT.jpg"
+  },
+  {
+    "name": "Ieremias Viorel",
+    "reviewNumber": 8,
+    "rating": 4.5,
+    "image_url": "https://cdn.ghanasoccernet.com/2017/07/FOOT.jpg"
+  }
+]

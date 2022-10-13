@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Fotbal la camine",
+    "category": "FOOTBALL",
+    "skill": "BEGINNER",
+    "price": 0,
+    "participants": 10,
+    "description": "Echipe de amatori, 5 vs 5, in limita timpului disponibil",
+    "image_url": "https://cdn.ghanasoccernet.com/2017/07/FOOT.jpg"
+  },
+  {
+    "name": "Observator running",
+    "category": "RUNNING",
+    "skill": "BEGINNER",
+    "price": 0,
+    "participants": 4,
+    "description": "Alergam",
+    "image_url": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/training-pace-calculator-1534874738.jpg?resize=480:*"
+  }
+]

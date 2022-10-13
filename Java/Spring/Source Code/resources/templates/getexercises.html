@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <div th:replace="fragments/header :: header-css"/>
+</head>
+<body>
+
+<div th:replace="fragments/header :: header"/>
+
+<div class="container">
+
+    <div class="exercises">
+        <h1>List of exercises</h1>
+
+        <table style="width:100%">
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Muscle</th>
+                <th>Difficulty</th>
+            </tr>
+            
+            </thead>
+            <tr th:each="exercise : ${exercises}">
+                <h2>
+                    <td th:text="${exercise.exerciseid}"></td>
+                </h2>
+                <h2>
+                    <td th:text="${exercise.name}"></td>
+                </h2>
+                <h2>
+                    <td th:text="${exercise.muscle}"></td>
+                </h2>
+                <h2>
+                    <td th:text="${exercise.difficulty}"></td>
+                </h2>
+            </tr>
+        </table>
+    </div>
+
+</div>
+<!-- /.container -->
+
+<div th:replace="fragments/footer :: footer"/>
+
+</body>
+</html>

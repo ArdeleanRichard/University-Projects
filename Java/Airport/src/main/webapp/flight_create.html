@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Insert title here</title>
+</head>
+<body>
+
+<h1>Add New Flight</h1>
+<form action="SaveFlightServlet" method="post">
+    <table>
+        <tr><td>Flight Number:</td><td><input type="text" name="number"/></td></tr>
+        <tr><td>Airplane Type:</td><td><input type="text" name="airplane_type"/></td></tr>
+        <tr><td>Departure City:</td><td><input type="text" name="departure_city"/></td></tr>
+        <tr><td>Arrival City:</td><td><input type="text" name="arrival_city"/></td></tr>
+        <tr><td>Departure Date:</td><td><input type="date" name="departure_date"/></td></tr>
+        <tr><td>Arrival Date:</td><td><input type="date" name="arrival_date"/></td></tr>
+        <tr><td>Departure Hour:</td><td><input type="number" name="departure_hour"/></td></tr>
+        <tr><td>Arrival Hour:</td><td><input type="number" name="arrival_hour"/></td></tr>
+
+        </td></tr>
+        <tr><td colspan="2"><input type="submit" value="Save Flight"/></td></tr>
+    </table>
+</form>
+
+<br/>
+<a href="admin/view">View flights</a>
+
+</body>
+</html>

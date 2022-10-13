@@ -1,0 +1,30 @@
+@import "../../assets/scss/variables.scss";
+
+.dialog-card {
+  width: 250px;
+  padding: 20px 40px;
+
+  .mat-form-field {
+    width: 100%;
+  }
+
+  .mat-raised-button {
+    width: 100%;
+    margin: 0;
+    margin-top: 15px;
+  }
+
+  .error-message {
+    color: $warn;
+    text-align: center;
+    font-weight: bold;
+
+    &.visible {
+      visibility: visible;
+    }
+
+    &.hidden {
+      visibility: hidden;
+    }
+  }
+}

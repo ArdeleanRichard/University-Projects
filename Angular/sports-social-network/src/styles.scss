@@ -1,0 +1,37 @@
+@import 'assets/scss/variables.scss';
+@import 'assets//scss/theme.scss';
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  background-image: url("./assets/images/running-1.jpg");
+  background-size: cover;
+}
+
+/*
+ * Custom scrollbar styling
+ */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 3px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #BDBDBD;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: grey;
+}

@@ -1,0 +1,19 @@
+<div class="dialog-card">
+  <h1>Log In</h1>
+  <mat-dialog-content>
+    <mat-form-field>
+      <input matInput placeholder="Username" [(ngModel)]="username" color="primary">
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input matInput type="password" placeholder="Password" [(ngModel)]="password">
+    </mat-form-field>
+    <div class="error-message" [ngClass]="loginFail ? 'visible' : 'hidden'">
+      Invalid username or password!
+    </div>
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button mat-raised-button color="primary" (click)="authenticate()">Submit</button>
+    <button mat-raised-button color="warn" (click)="close()">Close</button>
+  </mat-dialog-actions>
+</div>

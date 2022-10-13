@@ -1,0 +1,14 @@
+<div>
+  <div class="default-container menu-container">
+    <app-side-menu
+      [menuOptions]="EVENT_MENU_OPTIONS"
+      [selectedMenuOption]="selectedMenuOption"
+      (selectedMenuChange)="onSelectedMenuChange($event)">
+    </app-side-menu>
+  </div>
+  <div class="default-container content-container">
+    <div class="content-card">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+<div class="photos">
+  <div class="recentEvents">
+    <p style="text-align: left; margin-left: 40px; font-weight: bold">Select one of your recent events:</p>
+    <div class="listEvents">
+      <ul>
+        <li class="listEventItem" *ngFor="let event of yourEvents" style="list-style: none;">
+          <button (click)="selectEvent(event)" [type]="selectedEvent == event ? 'selected' : null">
+            {{event.name}}</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="center">
+    <file-drop headertext="Drop files here" (onFileDrop)="dropped($event)" (onFileOver)="fileOver($event)"
+      (onFileLeave)="fileLeave($event)">
+    </file-drop>
+
+    <button mat-stroked-button class="buttonPost" (click)="onPostPhotos()"> Upload </button>
+    <div style="color: red;font-size: small;">
+      {{ eventStatus }}
+    </div>
+
+    <div class="tooltip">
+      <span class="tooltiptext">You can remove photos by clicking them</span>
+      <img *ngFor="let file of files" (click)="removePhoto(file)" src="../assets/images/{{file.relativePath}}" />
+    </div>
+  </div>
+
+</div>
